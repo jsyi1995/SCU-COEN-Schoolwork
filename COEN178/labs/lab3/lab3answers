@@ -1,0 +1,4 @@
+Part 3
+
+a) The problem is that GROUP BY deptid won't group the information into a single column.
+b) The subquery returns multiple columns instead of one.

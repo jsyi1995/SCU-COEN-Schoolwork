@@ -1,0 +1,48 @@
+SQL> CREATE TABLE mycourses(
+  2  courseNo char(10),
+  3  units int,
+  4  grade char(2),PRIMARY KEY(courseNo)
+  5  );
+
+Table created.
+
+SQL> start /home/jyi/COEN178/labs/lab1/P3.sql
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+SQL> start /home/jyi/COEN178/labs/lab1/P3Quer.sql
+
+COURSENO        UNITS GR                                                        
+---------- ---------- --                                                        
+COEN174             5 A                                                         
+COEN146             5 A                                                         
+ENGL181             4 A                                                         
+MISSING             0 C                                                         
+
+
+COURSENO                                                                        
+----------                                                                      
+ENGL181                                                                         
+
+
+COURSENO                                                                        
+----------                                                                      
+COEN174                                                                         
+COEN146                                                                         
+ENGL181                                                                         
+
+
+COURSENO        UNITS                                                           
+---------- ----------                                                           
+MISSING             0                                                           
+
+SQL> spool off;
