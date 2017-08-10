@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>GreenField Rental Management Incorporated</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">GreenField Rental Management Inc.</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Home</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Home</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+    </nav>
+
+  <div class="container">
+    <div class="section">
+
+    <div class="row">
+      <div class="center">
+        <h3>Dashboard</h3>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col s4">
+        <div class="light-blue lighten-1 card-panel center">
+          <h4>Lease Agreements</h4>
+        </div>
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header"><i class="material-icons">library_add</i>Create Lease Agreement</div>
+            <div class="collapsible-body">
+              <span>Create a new lease agreement</span>
+              <br>
+              <br>
+              <a class="btn waves-effect waves-light red" href="transaction6.html">Create<i class="material-icons right">send</i></a>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">library_books</i>View Lease Agreement</div>
+            <div class="collapsible-body">
+              <span>View an existing lease agreement for a certain person</span>
+              <br>
+              <br>
+              <form action="transaction7.php" method="post">
+              <div class="input-field">
+                <input id="vlease" name="vlease" type="text" class="active validate">
+                <label for="vlease">Renter's Name</label>
+              </div>
+              <div class="input-field">
+                <button id="action1" class="btn waves-effect waves-light red" type="submit" name="action1">View<i class="material-icons right">send</i></button>
+              </div>
+            </form>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">av_timer</i>View Properties with Almost Expiring Leases</div>
+            <div class="collapsible-body">
+              <span>View names and addresses of properties whose leases will expire in the next two months</span>
+              <br>
+              <br>
+              <a class="btn waves-effect waves-light red" href="transaction10.php">View<i class="material-icons right">send</i></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col s4">
+        <div class="light-blue lighten-1 card-panel center">
+          <h4>Human Logistics</h4>
+        </div>
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header"><i class="material-icons">perm_identity</i>View Supervisors</div>
+            <div class="collapsible-body">
+              <span>View supervisors and the properties they supervise</span>
+              <br>
+              <br>
+              <a class="btn waves-effect waves-light red" href="transaction2.php">View<i class="material-icons right">send</i></a>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">business</i>View an Owner's Properties</div>
+            <div class="collapsible-body">
+              <span>View a list of properties by a specific owner</span>
+              <br>
+              <br>
+              <form action="transaction3.php" method="post">
+                <div class="input-field">
+                  <input id="vOwner" name="vOwner" type="text" class="active validate">
+                  <label for="vOwner">Owner's Name</label>
+                </div>
+                <div class="input-field">
+                  <button id="action2" class="btn waves-effect waves-light red" type="submit" name="action2">View<i class="material-icons right">send</i></button>
+                </div>
+            </form>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">recent_actors</i>View Multi-Vacant Renters</div>
+            <div class="collapsible-body">
+              <span>View renters who rented more than one rental property</span>
+              <br>
+              <br>
+              <a class="btn waves-effect waves-light red" href="transaction8.php">View<i class="material-icons right">send</i></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col s4">
+        <div class="light-blue lighten-1 card-panel center">
+          <h4>Rental Properties</h4>
+        </div>
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header"><i class="material-icons">search</i>Search Rental Properties</div>
+            <div class="collapsible-body">
+              <span>Search rental properties with filters for city, number of rooms, and monthly rent</span>
+              <br>
+              <br>
+              <form action="transaction4.php" method="post">
+              <div class="input-field">
+                <input id="vplace" name="vplace" type="text" class="active validate">
+                <label for="vplace">City</label>
+              </div>
+              <div class="input-field">
+                <input id="vroomno" name="vroomno" type="text" class="active validate">
+                <label for="vroomno">Number of Rooms</label>
+              </div>
+              <div class="input-field">
+                <input id="vminrent" name="vminrent" type="text" class="active validate">
+                <label for="vminrent">Minimum Rent</label>
+              </div>
+              <div class="input-field">
+                <input id="vmaxrent" name="vmaxrent" type="text" class="active validate">
+                <label for="vmaxrent">Maximum Rent</label>
+              </div>
+              <div class="input-field">
+                <button id="action3" class="btn waves-effect waves-light red" type="submit" name="action3">View<i class="material-icons right">send</i></button>
+              </div>
+              </form>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">view_module</i>View a Branch's Rental Properties</div>
+            <div class="collapsible-body">
+              <span>View a list of properties available for a specific branch along with the manager's name</span>
+              <br>
+              <br>
+              <form action="transaction1.php" method="post">
+              <div class="input-field">
+                <input id="vbranchnum" name="vbranchnum" type="text" class="active validate">
+                <label for="vbranchnum">Branch Number</label>
+              </div>
+              <div class="input-field">
+                <button id="action4" class="btn waves-effect waves-light red" type="submit" name="action4">View<i class="material-icons right">send</i></button>
+              </div>
+              </form>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">store</i>View Number of Rental Properties by Branch</div>
+            <div class="collapsible-body">
+              <span>Show the number of available rental properties by branch number</span>
+              <br>
+              <br>
+              <a class="btn waves-effect waves-light red" href="transaction5.php">View<i class="material-icons right">send</i></a>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">trending_up</i>View Average Rent for Properties</div>
+            <div class="collapsible-body">
+              <span>View the average rent for properties in a town</span>
+              <br>
+              <br>
+              <a class="btn waves-effect waves-light red" href="transaction9.php">View<i class="material-icons right">send</i></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

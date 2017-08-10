@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>GreenField Rental Management Incorporated</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">GreenField Rental Management Inc.</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+    </nav>
+
+  <div class="container">
+    <h3>Create Lease Agreement</h3>
+    <div id="transaction6" class="card-panel white">
+        <form class="col s12" action="transaction6.php" method="post">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="cRenterName" name="cRenterName" type="text" class="active validate" data-length="20">
+              <label for="cRenterName">Renter's Name</label>
+            </div>
+	    </div>
+            <div class="row">
+                <div class="input-field col s3">
+              <input id="cHomePhone" name="cHomePhone" type="text" class="active validate" data-length="10">
+              <label for="cHomePhone">Home Phone Number</label>
+            </div>
+	    <div class="input-field col s3">
+              <input id="cWorkPhone" name="cWorkPhone" type="text" class="active validate" data-length="10">
+              <label for="cWorkPhone">Work Phone Number</label>
+            </div>
+          </div>
+            
+	  <div class="row">
+	    <div class="input-field col s3">
+              <input id="cContactName" name="cContactName" type="text" class="active validate" data-length="20">
+              <label for="cContactName">Contact Name</label>
+            </div>
+	    <div class="input-field col s3">
+              <input id="cContactPhone" name="cContactPhone" type="text" class="active validate" data-length="10">
+              <label for="cContactPhone">Contact Phone Number</label>
+            </div>
+	  </div>
+          
+            <div class="row">
+            <div class="input-field col s3">
+              <input type="text" id="date1" name="date1" class="datepicker">
+                <label for="date1">Start Date</label>
+            </div>
+            <div class="input-field col s3">
+              <input type="text" id="date2" name="date2" class="datepicker">
+                <label for="date2">End Date</label>
+            </div>
+            </div>
+            <div class="row">
+            <div class="input-field col s3">
+              <input placeholder="500.00" id="cdepAmt" name="cdepAmt" type="text" class="active validate">
+              <label for="cdepAmt">Deposit Amount</label>
+            </div>
+            <div class="input-field col s3">
+              <input placeholder="50.00" id="crentAmt" name="crentAmt" type="text" class="active validate">
+              <label for="crentAmt">Rent Amount</label>
+            </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s3">
+              <input id="csupname" name="csupname" type="text" class="active validate" data-length="20">
+              <label for="csupname">Supervisor Name</label>
+              </div>
+              <div class="input-field col s3">
+              <input id="crentno" name="crentno" type="text" class="active validate" data-length="3">
+              <label for="crentno">Rental Property Number</label>
+              </div>
+              <div class="input-field col s3 offset-s1">
+              <button id="action4" class="btn waves-effect waves-light red" type="submit" name="action4">Create<i class="material-icons right">send</i></button>
+            </div>
+            </div>
+        </form>
+      </div>
+    <br><br>
+
+    <div class="section">
+
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+      $('.datepicker').pickadate({
+selectMonths: true,//Creates a dropdown to control month
+selectYears: 15,//Creates a dropdown of 15 years to control year
+//The title label to use for the month nav buttons
+labelMonthNext: 'Next Month',
+labelMonthPrev: 'Last Month',
+//The title label to use for the dropdown selectors
+labelMonthSelect: 'Select Month',
+labelYearSelect: 'Select Year',
+//Months and weekdays
+monthsFull: [ 'January', 'February', 'March', 'April', 'March', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
+monthsShort: [ 'Jan', 'Feb', 'Mar', 'Apr', 'Mar', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
+weekdaysFull: [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ],
+weekdaysShort: [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ],
+//Materialize modified
+weekdaysLetter: [ 'S', 'M', 'T', 'W', 'T', 'F', 'S' ],
+//Today and clear
+today: 'Today',
+clear: 'Clear',
+close: 'Close',
+//The format to show on the `input` element
+format: 'dd-mmm-yy'
+});
+  </script>
+  </body>
+</html>
